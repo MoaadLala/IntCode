@@ -1,0 +1,26 @@
+.card {
+  border-radius: 1em;
+  /* margin-top: 1em; */
+}
+
+.card p {
+  padding: 0 10vh;
+}
+
+.card img {
+  position: relative;
+  max-width: 100%;
+  height: 45vh;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 400px) {
+  .card p {
+    padding: 0 10px;
+  }
+
+  .card img {
+    max-width: 100%;
+    height: 30vh;
+  }
+}
