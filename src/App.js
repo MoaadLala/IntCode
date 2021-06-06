@@ -1,14 +1,20 @@
-import './App.css';
 import './Components/Main/Main';
 import Main from './Components/Main/Main';
-import Courses from './Components/Courses/Courses';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Purchase from './Components/Purchase/Purchase';
 
 function App() {
   return (
-    <div className="App">
-      <Main />
-      <Courses />
-    </div>
+    <Router>      
+      <Switch>
+        <Route path="/" exact={true}>
+            <Main />
+        </Route>
+        <Route path="/purchase" exact={true}>
+          <Purchase />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

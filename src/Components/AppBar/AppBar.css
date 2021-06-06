@@ -3,7 +3,8 @@
 }
 
 nav {
-    padding-bottom: 7em;
+    padding-bottom: 4em;
+    background-color: black;
 }
 
 .brand {
@@ -12,8 +13,17 @@ nav {
     display: inline-block;
 }
 
+#logIn {
+    margin-left: 2em;
+}
+
+.brand a {
+    text-decoration: none;
+    color: white;
+}
+
 .right-aligned {
-    padding-top: .5em;
+    padding-top: 1.4em;
     float: right;
 }
 
@@ -79,7 +89,8 @@ nav {
     }
 
     .menu {
-        height: 100vh;
+        width: 100%;
+        padding-top: 1em;
         justify-content: center;
         align-items: center;
     }
@@ -93,9 +104,11 @@ nav {
     }
 
     .menu a {
+        display: block;
         padding-top: 1em;
+        width: 100%;
         text-align: center;
-        margin: 1em;
+        margin: auto;
         text-decoration: none;
         color: white;
         font-size: 1.3em;

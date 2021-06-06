@@ -1,15 +1,16 @@
+import { Link } from 'react-router-dom';
 import './AppBar.css';
 
 export default function AppBar() {
     return (
         <div className="AppBar">
             <nav>
-                <h2 className="brand">IntCode</h2>
+            <h2 className="brand"><Link to="/">IntCode</Link></h2>
                 <div className="right-aligned">
-                    <a href="#">courses</a>
-                    <a href="#">contact us</a>
-                    <a href="#">purchase</a>
-                    <a href="#">Log In</a>
+                    <Link to="/courses">courses</Link>
+                    <Link to="/contact">contact us</Link>
+                    <Link to="/purchase">purchase</Link>
+                    <Link to="/login" id="logIn">Log In</Link>
                 </div>
                 <div className="ham-menu">
                     <button onClick={showMenu} id="open-ham-menu">
@@ -23,10 +24,10 @@ export default function AppBar() {
                 </div>
                 <div className="menu">
                     <ul>
-                        <li><a href="#">courses</a></li>
-                        <li><a href="#">contact us</a></li>
-                        <li><a href="#">purchase</a></li>
-                        <li><a href="#">Log In</a></li>
+                        <li><Link to="/courses">courses</Link></li>
+                        <li><Link to="/contact">contact us</Link></li>
+                        <li><Link to="/purchase">purchase</Link></li>
+                        <li><Link to="/login">Log In</Link></li>
                     </ul>
                 </div>
             </nav>

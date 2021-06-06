@@ -1,0 +1,76 @@
+.PurchaseSection {
+  background-color: #ececec;
+  color: black;
+  padding-bottom: 9%;
+}
+
+.PurchaseSection p {
+    font-weight: 200;
+    font-size: 1.4em;
+}
+
+.PurchaseSection h1 {
+    padding-top: 1em;
+}
+
+.PurchaseCard {  
+  display: inline-block;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.PurchaseCard h1 {
+    padding: 0.3em;
+    background-color: #2789e4;
+    margin: 0;
+    color: white;
+    font-weight: lighter;
+    font-size: 1.8em;
+}
+
+.PurchaseCardDetails {
+    background-color: white;
+}
+
+.PurchaseCardDetails h2 {
+    margin: 0;
+    font-weight: lighter;
+}
+
+.PurchaseCardDetails h1 {
+    color: black;
+    padding: 0;
+    background-color: inherit;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.blueText {
+    color: #2789e4;
+}
+
+.PurchaseCardDetails button {
+    margin: 1.2em 0 1em 0;
+    background-color: #2789e4;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 1.6em;
+    padding: .3em 1.5em;
+    font-family: 'Open Sans', sans-serif;
+    transition: .5s;
+}
+
+.PurchaseCardDetails button:hover {
+    box-shadow: rgba(39, 137, 228, 0.4) 5px 5px, rgba(39, 137, 228, 0.3) 10px 10px, rgba(39, 137, 228, 0.2) 15px 15px, rgba(39, 137, 228, 0.1) 20px 20px, rgba(39, 137, 228, 0.05) 25px 25px;
+}
+
+.PurchaseCardDetails ul {
+    padding-inline-start: 10px;
+}
+
+.PurchaseCardDetails ul li {
+    text-align: left;
+    margin: .3em;
+    margin-bottom: .5em;
+    list-style-type: none;
+}
