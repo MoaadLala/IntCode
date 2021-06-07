@@ -10,7 +10,7 @@ export default function AppBar() {
                     <Link to="/courses">courses</Link>
                     <Link to="/contact">contact us</Link>
                     <Link to="/purchase">purchase</Link>
-                    <Link to="/login" id="logIn">Log In</Link>
+                    <div id="logIn" onClick={showLogIn}>Log In</div>
                 </div>
                 <div className="ham-menu">
                     <button onClick={showMenu} id="open-ham-menu">
@@ -27,10 +27,19 @@ export default function AppBar() {
                         <li><Link to="/courses">courses</Link></li>
                         <li><Link to="/contact">contact us</Link></li>
                         <li><Link to="/purchase">purchase</Link></li>
-                        <li><Link to="/login">Log In</Link></li>
+                        <li><div id="logIn" onClick={showLogIn}>Log In</div></li>
                     </ul>
                 </div>
             </nav>
+            <div className="logInBackground">
+                <div className="logInSection">
+                    <div className="yellowSection">
+                        <span onClick={hideLogIn}>X</span>
+                    </div>
+                    <h2>Login to</h2><br />
+                    <h1>IntCode</h1>
+                </div>
+            </div>
         </div>
     )
 }
@@ -51,4 +60,14 @@ function hideMenu() {
     menu.style.display = 'none';
     openButton.style.display = 'block';
     closeButton.style.display = 'none';
+}
+
+function showLogIn() {
+    document.querySelector('.logInBackground').style.display = 'flex';
+    document.querySelector('.logInSection').style.display = 'block';
+}
+
+function hideLogIn() {
+    document.querySelector('.logInSection').style.display = 'none';
+    document.querySelector('.logInBackground').style.display = 'none';
 }

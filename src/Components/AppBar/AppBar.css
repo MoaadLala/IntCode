@@ -1,157 +1,236 @@
 .AppBar {
-    color: white;
+  color: white;
 }
 
 nav {
-    padding-bottom: 4em;
-    background-color: black;
+  padding-bottom: 4em;
+  background-color: #101010;
 }
 
 .brand {
-    float: left;
-    padding-left: 1em;
-    display: inline-block;
+  float: left;
+  padding-left: 1em;
+  display: inline-block;
 }
 
 #logIn {
-    margin-left: 2em;
+  margin-left: 2em;
+  float: right;
+  margin-right: 1em;
+  text-decoration: none;
+  color: white;
+  font-size: 1.3em;
+  transition: 0.5s;
+  background: linear-gradient(currentColor 0 0) var(--p, 0) 100% / var(--d, 0)
+    1px no-repeat;
+  transition: 0.3s, background-position 0s 0.3s;
+  cursor: pointer;
+}
+
+#logIn:hover {
+  --d: 100%;
+  --p: 100%;
 }
 
 .brand a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .right-aligned {
-    padding-top: 1.4em;
-    float: right;
+  padding-top: 1.4em;
+  float: right;
 }
 
 .right-aligned a {
-    float: center;
-    margin-right: 1em;
-    text-decoration: none;
-    color: white;
-    font-size: 1.3em;
-    transition: .5s;
-    background: 
-      linear-gradient(currentColor 0 0) 
-      var(--p, 0) 100% /var(--d, 0) 1px 
-      no-repeat;
-    transition: 0.3s, background-position 0s 0.3s;
+  float: center;
+  margin-right: 1em;
+  text-decoration: none;
+  color: white;
+  font-size: 1.3em;
+  transition: 0.5s;
+  background: linear-gradient(currentColor 0 0) var(--p, 0) 100% / var(--d, 0)
+    1px no-repeat;
+  transition: 0.3s, background-position 0s 0.3s;
 }
 
 .right-aligned a:hover {
-    --d: 100%;
-    --p: 100%;
+  --d: 100%;
+  --p: 100%;
 }
 
 .ham-menu {
-    display: none;
+  display: none;
 }
 
 .menu {
-    display: none;
+  display: none;
+}
+
+.logInBackground {
+  position: fixed;
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.logInSection {
+  background-color: white;
+  color: black;
+  backdrop-filter: blur(4px);
+  display: none;
+  max-width: 50%;
+}
+
+.yellowSection {
+  background-color: #e4ad32;
+  padding: 0.8em;
+  text-align: right;
+}
+
+.yellowSection span {
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: white;
+  padding: 0.1em 0.4em;
+  border-radius: 8px;
+}
+
+.yellowSection span:hover {
+  background-color: #e4ad32;
+  color: white;
+}
+
+.logInSection h2 {
+  margin-bottom: 0;
+  font-weight: 200;
+}
+
+.logInSection h1 {
+  margin-top: 0;
 }
 
 @media only screen and (max-width: 646px) {
-    .right-aligned {
-        display: none;
-    }
-    .ham-menu {
-        display: block;
-        float: right;
-        margin: 1em;
-    }
+  .right-aligned {
+    display: none;
+  }
+  .ham-menu {
+    display: block;
+    float: right;
+    margin: 1em;
+  }
 
-    .open-menu-bar {
-        width: 15px;
-        height: 3px;
-        background-color: white;
-        margin: 3px 0;
-        border-radius: 5px;
-    }
+  .open-menu-bar {
+    width: 15px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    border-radius: 5px;
+  }
 
-    #open-ham-menu {
-        background-color: transparent;
-        border: none;
-        outline: none;
-    }
+  #open-ham-menu {
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
 
-    #close-ham-menu {
-        display: none;
-        background-color: transparent;
-        border: none;
-        outline: none;
-        color: white;
-        font-weight: bold;
-        font-size: 1.5em;
-    }
+  #close-ham-menu {
+    display: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
 
-    .menu {
-        width: 100%;
-        padding-top: 1em;
-        justify-content: center;
-        align-items: center;
-    }
+  .menu {
+    width: 100%;
+    padding-top: 1em;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .fadeOut {
-        animation: fadeOut .5s;
-    }
+  .fadeOut {
+    animation: fadeOut 0.5s;
+  }
 
-    .fadeIn {
-        animation: fadeIn .5s;
-    }
+  .fadeIn {
+    animation: fadeIn 0.5s;
+  }
 
-    .menu a {
-        display: block;
-        padding-top: 1em;
-        width: 100%;
-        text-align: center;
-        margin: auto;
-        text-decoration: none;
-        color: white;
-        font-size: 1.3em;
-        transition: .5s;
-        background: 
-          linear-gradient(currentColor 0 0) 
-          var(--p, 0) 100% /var(--d, 0) 1px 
-          no-repeat;
-        transition: 0.3s, background-position 0s 0.3s;
-    }
-    
-    .menu a:hover {
-        --d: 100%;
-        --p: 100%;
-    }
+  .menu a {
+    display: block;
+    padding-top: 1em;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
+    transition: 0.5s;
+    background: linear-gradient(currentColor 0 0) var(--p, 0) 100% / var(--d, 0)
+      1px no-repeat;
+    transition: 0.3s, background-position 0s 0.3s;
+  }
 
-    .menu ul li {
-        list-style-type: none;
-        padding-top: 1em;
-    }
+  #logIn {
+    display: block;
+    padding-top: 1em;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
+    transition: 0.5s;
+    background: linear-gradient(currentColor 0 0) var(--p, 0) 100% / var(--d, 0)
+      1px no-repeat;
+    transition: 0.3s, background-position 0s 0.3s;
+    outline: none;
+  }
 
-    .menu ul {
-        padding: 0;
-        display: inline-block;
-    }
+  .menu a:hover {
+    --d: 100%;
+    --p: 100%;
+  }
+
+  .menu ul li {
+    list-style-type: none;
+    padding-top: 1em;
+  }
+
+  .menu ul {
+    padding: 0;
+    display: inline-block;
+  }
+
+  .logInSection {
+    right: 0;
+    left: 0;
+  }
 }
 
 @keyframes fadeOut {
-    0% {
-        display: block;
-    }
+  0% {
+    display: block;
+  }
 
-    100% {
-        display: none;
-    }
+  100% {
+    display: none;
+  }
 }
 
 @keyframes fadeIn {
-    0% {
-        display: none;
-    }
+  0% {
+    display: none;
+  }
 
-    100% {
-        display: block;
-    }
+  100% {
+    display: block;
+  }
 }
