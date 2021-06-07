@@ -8,7 +8,6 @@ export default function AppBar() {
             <h2 className="brand"><Link to="/">IntCode</Link></h2>
                 <div className="right-aligned">
                     <Link to="/courses">courses</Link>
-                    <Link to="/contact">contact us</Link>
                     <Link to="/purchase">purchase</Link>
                     <div id="logIn" onClick={showLogIn}>Log In</div>
                 </div>
@@ -25,7 +24,6 @@ export default function AppBar() {
                 <div className="menu">
                     <ul>
                         <li><Link to="/courses">courses</Link></li>
-                        <li><Link to="/contact">contact us</Link></li>
                         <li><Link to="/purchase">purchase</Link></li>
                         <li><div id="logIn" onClick={showLogIn}>Log In</div></li>
                     </ul>
