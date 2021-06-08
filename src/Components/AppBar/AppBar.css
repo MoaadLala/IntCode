@@ -19,7 +19,7 @@ nav {
   margin-right: 1em;
   text-decoration: none;
   color: white;
-  font-size: 1.3em;
+  font-size: 1.1em;
   transition: 0.5s;
   background: linear-gradient(currentColor 0 0) var(--p, 0) 100% / var(--d, 0)
     1px no-repeat;
@@ -47,7 +47,7 @@ nav {
   margin-right: 1em;
   text-decoration: none;
   color: white;
-  font-size: 1.3em;
+  font-size: 1.1em;
   transition: 0.5s;
   background: linear-gradient(currentColor 0 0) var(--p, 0) 100% / var(--d, 0)
     1px no-repeat;
@@ -125,9 +125,9 @@ nav {
 .coursesDropdown a {
   margin: 0;
   text-decoration: none;
-  font-size: 1em;
   color: black;
   text-align: left;
+  font-size: .8em;
   padding: .8em;
   background: #f9f9f9;
   display: block;
@@ -139,6 +139,8 @@ nav {
 
 .coursesDropdown a img {
   padding-right: 5px;
+  display: inline-block;
+  text-align: center;
   width: 16px;
   height: 16px;
 }
@@ -208,7 +210,7 @@ body:hover .coursesDropdown {
     margin: auto;
     text-decoration: none;
     color: white;
-    font-size: 1.3em;
+    font-size: 1.2em;
     transition: 0.5s;
     background: linear-gradient(currentColor 0 0) var(--p, 0) 100% / var(--d, 0)
       1px no-repeat;
@@ -223,7 +225,7 @@ body:hover .coursesDropdown {
     margin: auto;
     text-decoration: none;
     color: white;
-    font-size: 1.3em;
+    font-size: 1.2em;
     transition: 0.5s;
     outline: none;
   }
@@ -292,7 +294,7 @@ body:hover .coursesDropdown {
     margin: auto;
     text-decoration: none;
     color: white;
-    font-size: 1.3em;
+    font-size: 1.2em;
     transition: 0.5s;
     background: linear-gradient(currentColor 0 0) var(--p, 0) 100% / var(--d, 0)
       1px no-repeat;
