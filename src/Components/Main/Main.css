@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 .MainSection {
-  margin-top: 1em;  
+  margin-top: 2em;  
   background-image: url("first-page-cover-photo.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #000000;
+  background-color: inherit;
   height: 100vh;
   position: relative;
 }
@@ -27,8 +27,9 @@
     font-family: 'Open Sans', sans-serif;
     background-color: #e4ad32;
     border: none;
+    margin-top: 1em;
     padding: .5em 1.2em;
-    border-radius: .8em;
+    border-radius: .4em;
     font-size: 1.8em;
     cursor: pointer;
     transition: .5s;
@@ -37,4 +38,10 @@
 
 .MainSection button:hover {
     box-shadow: rgba(228, 173, 50, 0.4) 5px 5px, rgba(228, 173, 50, 0.3) 10px 10px, rgba(228, 173, 50, 0.2) 15px 15px, rgba(228, 173, 50, 0.1) 20px 20px, rgba(228, 173, 50, 0.05) 25px 25px;
+}
+
+@media only screen and (max-width: 646px) {
+    .MainSection {
+        background-image: none;
+    }
 }

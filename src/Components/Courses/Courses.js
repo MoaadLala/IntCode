@@ -13,7 +13,7 @@ import sql from '../../assets/SQLCoursePhoto.png';
 export default function Courses() {
     return (
         <div className="courses">
-            <h1> Courses </h1> <br />
+            <h1> Courses Available </h1> <br />
             <div className="cards-grid-container">
                 <div className="card-container"><Card Image={algorithms} Bio="Algorithmes are the most important part of coding interviews. Make sure you know them well."/></div>
                 <div className="card-container"><Card Image={dataStructures} Bio="Data structures provides the right way to organize information in the digital space. Learn them with us."/></div>

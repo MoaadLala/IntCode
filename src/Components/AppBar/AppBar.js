@@ -1,13 +1,38 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import './AppBar.css';
+import python from '../../assets/python.png';
+import algorithms from '../../assets/algorithms.png';
+import bitwiseOperations from '../../assets/bitwiseOperations.jpg';
+import dataStructure from '../../assets/datastructure.png';
+import designPatterns from '../../assets/designPatterns.png';
+import sql from '../../assets/sql.png';
+import cryptography from '../../assets/cryptography.png';
+import regularExpression from '../../assets/regularExpression.png';
+import git from '../../assets/git.png';
+
 
 export default function AppBar() {
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     return (
         <div className="AppBar">
             <nav>
             <h2 className="brand"><Link to="/">IntCode</Link></h2>
                 <div className="right-aligned">
-                    <Link to="/courses">courses</Link>
+                    <Link to="#" id="courses">
+                        courses
+                        <div className="coursesDropdown">
+                                <a href="#"><img src={python}/>Python</a>
+                                <a href="#"><img src={algorithms} />Algorithms</a>
+                                <a href="#"><img src={dataStructure} />Data Structures</a>
+                                <a href="#"><img src={designPatterns} />Design Patterns</a>
+                                <a href="#"><img src={sql} />SQL</a>
+                                <a href="#"><img src={cryptography} />Cryptography</a>
+                                <a href="#"><img src={bitwiseOperations} />Bitwise operations</a>
+                                <a href="#"><img src={regularExpression} />Regular Expressions</a>
+                                <a href="#"><img src={git} />Git</a>
+                        </div>
+                    </Link>
                     <Link to="/purchase">purchase</Link>
                     <div id="logIn" onClick={showLogIn}>Log In</div>
                 </div>
@@ -23,7 +48,32 @@ export default function AppBar() {
                 </div>
                 <div className="menu">
                     <ul>
-                        <li><Link to="/courses">courses</Link></li>
+                        <li><div className="coursesDropdownButton">
+                            <span onClick={() => {
+                            if (isDropdownOpen) {
+                                document.querySelector('.mobile-courses-dropdown').style.display = 'none';
+                                document.getElementById('arrowIcon').classList.remove('up');
+                                document.getElementById('arrowIcon').classList.add('down');
+                                setIsDropdownOpen(false);
+                            } else {
+                                document.querySelector('.mobile-courses-dropdown').style.display = 'block';
+                                setIsDropdownOpen(true);
+                                document.getElementById('arrowIcon').classList.add('up');
+                                document.getElementById('arrowIcon').classList.remove('down');
+                            }
+                        }}>courses <i class="arrow down" id="arrowIcon"></i></span>
+                            <div className="mobile-courses-dropdown">
+                                <a href="#">Python</a>
+                                <a href="#">Algorithms</a>
+                                <a href="#">Data Structures</a>
+                                <a href="#">Design Patterns</a>
+                                <a href="#">SQL</a>
+                                <a href="#">Cryptography</a>
+                                <a href="#">Bitwise operations</a>
+                                <a href="#">Regular Expressions</a>
+                                <a href="#">Git</a>
+                            </div>
+                        </div></li>
                         <li><Link to="/purchase">purchase</Link></li>
                         <li><div id="logIn" onClick={showLogIn}>Log In</div></li>
                     </ul>

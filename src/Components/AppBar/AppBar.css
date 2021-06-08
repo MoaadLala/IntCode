@@ -114,6 +114,43 @@ nav {
   margin-top: 0;
 }
 
+.coursesDropdown {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.coursesDropdown a {
+  margin: 0;
+  text-decoration: none;
+  font-size: 1em;
+  color: black;
+  text-align: left;
+  padding: .8em;
+  background: #f9f9f9;
+  display: block;
+}
+
+.coursesDropdown a:hover {
+  background: #f1f1f1;
+}
+
+.coursesDropdown a img {
+  padding-right: 5px;
+  width: 16px;
+  height: 16px;
+}
+
+#courses:hover .coursesDropdown {
+  display: block;
+}
+
+body:hover .coursesDropdown {
+  display: none;
+}
+
 @media only screen and (max-width: 646px) {
   .right-aligned {
     display: none;
@@ -188,15 +225,7 @@ nav {
     color: white;
     font-size: 1.3em;
     transition: 0.5s;
-    background: linear-gradient(currentColor 0 0) var(--p, 0) 100% / var(--d, 0)
-      1px no-repeat;
-    transition: 0.3s, background-position 0s 0.3s;
     outline: none;
-  }
-
-  .menu a:hover {
-    --d: 100%;
-    --p: 100%;
   }
 
   .menu ul li {
@@ -212,6 +241,62 @@ nav {
   .logInSection {
     right: 0;
     left: 0;
+  }
+
+  .mobile-courses-dropdown {
+    display: none;
+  }
+  
+  .mobile-courses-dropdown a {
+    margin: 0;
+    text-decoration: none;
+    color: white;
+    text-align: left;
+    display: block;
+    font-size: 1em;
+    background: none;
+  }
+  
+  .mobile-courses-dropdown a img {
+    padding-right: 5px;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .mobile-courses-dropdown a:hover {
+    background: none;
+  }
+
+  .arrow {
+    border: solid white;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+  
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
+  .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+
+  .coursesDropdownButton {
+    display: block;
+    padding-top: 1em;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
+    transition: 0.5s;
+    background: linear-gradient(currentColor 0 0) var(--p, 0) 100% / var(--d, 0)
+      1px no-repeat;
+    transition: 0.3s, background-position 0s 0.3s;
   }
 }
 
