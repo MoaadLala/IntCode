@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+.MainSection {
+  margin-top: 2em;  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: inherit;
+  height: 100vh;
+  position: relative;
+}
+
+.trumbo {
+    font-weight: 800;
+    display: inline-block;
+    text-align: center;
+}
+
+.MainSection p {
+    font-size: 1.4em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+.MainSection button {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #e4ad32;
+    border: none;
+    margin-top: 1em;
+    padding: .4em 1.1em;
+    border-radius: .4em;
+    font-size: 1.6em;
+    cursor: pointer;
+    transition: .5s;
+    outline: none;
+}
+
+.MainSection button:hover {
+    box-shadow: rgba(228, 173, 50, 0.4) 5px 5px, rgba(228, 173, 50, 0.3) 10px 10px, rgba(228, 173, 50, 0.2) 15px 15px, rgba(228, 173, 50, 0.1) 20px 20px, rgba(228, 173, 50, 0.05) 25px 25px;
+}
+
+@media only screen and (max-width: 646px) {
+    .MainSection {
+        background-image: none;
+    }
+}

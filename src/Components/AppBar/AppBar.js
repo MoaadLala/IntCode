@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import './AppBar.css';
+//images:
 import python from '../../assets/python.png';
 import algorithms from '../../assets/algorithms.png';
 import bitwiseOperations from '../../assets/bitwiseOperations.jpg';
@@ -23,7 +24,7 @@ export default function AppBar() {
                         courses
                         <div className="coursesDropdown">
                                 <a href="#"><img src={python}/>Python</a>
-                                <a href="#"><img src={algorithms} />Algorithms</a>
+                                <Link to="/algorithms"><img src={algorithms} />Algorithms</Link>
                                 <a href="#"><img src={dataStructure} />Data Structures</a>
                                 <a href="#"><img src={designPatterns} />Design Patterns</a>
                                 <a href="#"><img src={sql} />SQL</a>
@@ -64,7 +65,7 @@ export default function AppBar() {
                         }}>courses <i class="arrow down" id="arrowIcon"></i></span>
                             <div className="mobile-courses-dropdown">
                                 <a href="#">Python</a>
-                                <a href="#">Algorithms</a>
+                                <Link to="/algorithms">Algorithms</Link>
                                 <a href="#">Data Structures</a>
                                 <a href="#">Design Patterns</a>
                                 <a href="#">SQL</a>
