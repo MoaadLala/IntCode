@@ -9,6 +9,7 @@ import git from '../../assets/GitCoursePhoto.png';
 import python from '../../assets/pythonCoursePhoto.png';
 import regularExpressions from '../../assets/regularExpressionsCoursePhoto.png';
 import sql from '../../assets/SQLCoursePhoto.png';
+import { Link } from 'react-router-dom';
 
 export default function Courses() {
     return (
@@ -17,7 +18,7 @@ export default function Courses() {
             <div className="cards-grid-container">
                 <div className="card-container"><Card Image={python} Bio="The python language is on of the most useful programming languages available because it has simplified syntax (not very complicated)."/></div>
                 <div className="card-container"><Card Image={sql} Bio="Structured Query Language (SQL) is the standard and most widely used programming language for relational databases. It is used to manage and organize data in all sorts of systems."/></div>
-                <div className="card-container"><Card Image={algorithms} Bio="Algorithmes are the most important part of coding interviews. Make sure you know them well."/></div>
+                <div className="card-container"><Link to="/algorithms"><Card Image={algorithms} Bio="Algorithmes are the most important part of coding interviews. Make sure you know them well."/></Link></div>
                 <div className="card-container"><Card Image={dataStructures} Bio="Data structures provides the right way to organize information in the digital space. Learn them with us."/></div>
                 <div className="card-container"><Card Image={designPatterns} Bio="Design patterns are best practices that the programmer can use to solve common problems. You can learn to design patterns here."/></div>
                 <div className="card-container"><Card Image={regularExpressions} Bio="regular expressions are particularly useful for defining filters. Regular expressions contain a series of characters that define a pattern of text to be matched."/></div>
