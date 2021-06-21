@@ -1,8 +1,8 @@
-import './AlgorithmsCard.css';
+import './InfoCard.css';
 
-export default function AlgorithmsCard(props) {
+export default function InfoCard(props) {
     return (
-        <div className="algorithmsCard">
+        <div className="InfoCard">
             <img src={props.image} />
             <div className="cardText">
                 <h1 id="name">{props.name}</h1>

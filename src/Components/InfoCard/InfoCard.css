@@ -1,4 +1,4 @@
-.algorithmsCard {
+.InfoCard {
     background-color: white;
     color: black;
     display: grid;
@@ -11,11 +11,11 @@
     margin-bottom: 2em;
 }
 
-.algorithmsCard:hover {
+.InfoCard:hover {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.algorithmsCard img {
+.InfoCard img {
     grid-column: 1/2;
     width: 80%;
     max-width: 80%;
@@ -34,25 +34,25 @@
 }
 
  @media only screen and (max-width: 1166px) {
-    .algorithmsCard {
+    .InfoCard {
         grid-template-columns: 2fr 2fr;
     }
 } 
 
 @media only screen and (min-width: 1070px) {
-    .algorithmsCard:hover {
+    .InfoCard:hover {
         margin: 2em 3em;
     }
 }
 
 @media only screen and (max-width: 1070px) {
-    .algorithmsCard {
+    .InfoCard {
         grid-template-rows: 1.5fr 1fr;
         margin: 2em 14em;
     }
 
 
-    .algorithmsCard img {
+    .InfoCard img {
         max-width: 100%;
         width: 100%;
         grid-column: 1/3;
@@ -70,7 +70,7 @@
 }
 
 @media only screen and (max-width: 885px) {
-    .algorithmsCard {
+    .InfoCard {
         grid-template-rows: 1fr .5fr;
         margin: 2em 13em;
     }
@@ -81,7 +81,7 @@
 }
 
 @media only screen and (max-width: 854px) {
-    .algorithmsCard {
+    .InfoCard {
         grid-template-rows: 1fr .5fr;
     }
 
@@ -91,12 +91,16 @@
 }
 
 @media only screen and (max-width: 685px) {
-    .algorithmsCard {
+    .InfoCard {
         margin: 2em 4em;
     }
 }
 
 @media only screen and (max-width: 440px) {
+    .cardText p {
+        display: none;
+    }
+    
     body {
         font-size: .9em;
     }

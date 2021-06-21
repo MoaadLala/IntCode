@@ -2,8 +2,7 @@ import AppBar from '../AppBar/AppBar';
 import './Algorithms.css';
 import algorithmsCover from '../../assets/algorithmsCover.png'
 import MainSection from '../MainSection/MainSection';
-import AlgorithmsCard from '../AlgorithmsCard/AlgorithmsCard';
-import testImage from '../AlgorithmsCard/test.png';
+import InfoCard from '../InfoCard/InfoCard';
 import db from '../firbase/firbase';
 import { useEffect, useState } from 'react';
 
@@ -33,13 +32,10 @@ export default function Algorithms() {
                 <p>science. They form the field's backbone</p>
                 <div className="cards">
                     {courses.map(course => {
-                        return (<AlgorithmsCard name={course.name} description={course.description} image={course.imageLink} />)
+                        return (<InfoCard name={course.name} description={course.description} image={course.imageLink} />)
                     })}
                 </div>
             </div>
         </div>
     )
 }
-
-/* <AlgorithmsCard name="Sorting Algorithms" description="All Sorting algorithms share the goal of outputting a sorted list, but the way that each algorithm goes about this task can vary" image={testImage} /> <br /> */
-/* <AlgorithmsCard name={} description={} image={testImage} /> */
