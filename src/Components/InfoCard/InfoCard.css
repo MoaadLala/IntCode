@@ -82,7 +82,7 @@
 
 @media only screen and (max-width: 854px) {
     .InfoCard {
-        grid-template-rows: 1fr .5fr;
+        grid-template-rows: 180px .5fr;
     }
 
     .cardText {
@@ -97,10 +97,6 @@
 }
 
 @media only screen and (max-width: 440px) {
-    .cardText p {
-        display: none;
-    }
-    
     body {
         font-size: .9em;
     }
