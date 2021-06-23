@@ -25,7 +25,7 @@ export default function AppBar() {
                         <div className="coursesDropdown">
                                 <a href="#"><img src={python}/>Python</a>
                                 <Link to="/algorithms"><img src={algorithms} />Algorithms</Link>
-                                <a href="#"><img src={dataStructure} />Data Structures</a>
+                                <Link to="/dataStructures"><img src={dataStructure} />Data Structures</Link>
                                 <a href="#"><img src={designPatterns} />Design Patterns</a>
                                 <a href="#"><img src={sql} />SQL</a>
                                 <a href="#"><img src={cryptography} />Cryptography</a>
@@ -66,7 +66,7 @@ export default function AppBar() {
                             <div className="mobile-courses-dropdown">
                                 <a href="#">Python</a>
                                 <Link to="/algorithms">Algorithms</Link>
-                                <a href="#">Data Structures</a>
+                                <Link to="/dataStructures">Data Structures</Link>
                                 <a href="#">Design Patterns</a>
                                 <a href="#">SQL</a>
                                 <a href="#">Cryptography</a>
