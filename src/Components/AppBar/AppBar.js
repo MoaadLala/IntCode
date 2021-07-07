@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import './AppBar.css';
+import { userName, userEmail, userPhotoUrl, emailVerified, currentUrl } from '../firbase/firbase';
+import firebase from 'firebase';
 //images:
 import python from '../../assets/python.png';
 import algorithms from '../../assets/algorithms.png';
@@ -11,7 +13,6 @@ import sql from '../../assets/sql.png';
 import cryptography from '../../assets/cryptography.png';
 import regularExpression from '../../assets/regularExpression.png';
 import git from '../../assets/git.png';
-
 
 export default function AppBar() {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -26,7 +27,7 @@ export default function AppBar() {
                                 <a href="#"><img src={python}/>Python</a>
                                 <Link to="/algorithms"><img src={algorithms} />Algorithms</Link>
                                 <Link to="/dataStructures"><img src={dataStructure} />Data Structures</Link>
-                                <a href="#"><img src={designPatterns} />Design Patterns</a>
+                                <Link to="/designPatterns"><img src={designPatterns} />Design Patterns</Link>
                                 <a href="#"><img src={sql} />SQL</a>
                                 <a href="#"><img src={cryptography} />Cryptography</a>
                                 <a href="#"><img src={bitwiseOperations} />Bitwise operations</a>
@@ -35,7 +36,7 @@ export default function AppBar() {
                         </div>
                     </Link>
                     <Link to="/purchase">purchase</Link>
-                    <div id="logIn" onClick={showLogIn}>Log In</div>
+                    <div id="logIn"><img className="loginIcon" alt=""/><p className="loginMainText" onClick={showLogIn}>Log In</p></div>
                 </div>
                 <div className="ham-menu">
                     <button onClick={showMenu} id="open-ham-menu">
@@ -62,7 +63,7 @@ export default function AppBar() {
                                 document.getElementById('arrowIcon').classList.add('up');
                                 document.getElementById('arrowIcon').classList.remove('down');
                             }
-                        }}>courses <i class="arrow down" id="arrowIcon"></i></span>
+                        }}>courses <i className="arrow down" id="arrowIcon"></i></span>
                             <div className="mobile-courses-dropdown">
                                 <a href="#">Python</a>
                                 <Link to="/algorithms">Algorithms</Link>
@@ -76,7 +77,10 @@ export default function AppBar() {
                             </div>
                         </div></li>
                         <li><Link to="/purchase">purchase</Link></li>
-                        <li><div id="logIn" onClick={showLogIn}>Log In</div></li>
+                        <li><div id="logIn" onClick={() => {
+                            showLogIn();
+                            hideMenu();
+                        }}>Log In</div></li>
                     </ul>
                 </div>
             </nav>
@@ -87,6 +91,7 @@ export default function AppBar() {
                     </div>
                     <h2>Login to</h2><br />
                     <h1>IntCode</h1>
+                    <div id="signInButtons"></div>
                 </div>
             </div>
         </div>

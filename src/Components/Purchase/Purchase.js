@@ -4,7 +4,6 @@ import './Purchase.css';
 export default function Purchase() {
     return (
         <div className="Purchase">
-            <AppBar />
             <div className="PurchaseSection">
                 <h1>Get Full Access</h1>
                 <p>Get Lifetime Access To Every Course</p>

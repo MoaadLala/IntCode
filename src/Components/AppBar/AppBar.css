@@ -153,6 +153,24 @@ body:hover .coursesDropdown {
   display: none;
 }
 
+.button img {
+  border-radius: .3em;
+  max-width: 40px;
+  float: left;
+  display: inline-block;
+  background-color: #fff;
+}
+
+.loginIcon {
+  max-width: 30px;
+  border-radius: .3em;
+  display: none;
+}
+
+.loginMainText {
+  margin: 0;
+}
+
 @media only screen and (max-width: 646px) {
   .right-aligned {
     display: none;
