@@ -6,6 +6,9 @@ import Algorithms from './Components/Algorithms/Algorithms';
 import DataStructures from './Components/DataStructures/DataStructures';
 import AppBar from './Components/AppBar/AppBar';
 import DesignPatterns from './Components/DesignPatterns/DesignPatterns'
+import Git from './Components/Git/Git';
+import RegularExpression from './Components/RegularExpression/RegularExpression';
+import CryptoGraphy from './Components/cryptoGraphy/CryptoGraphy';
 
 function App() {
   return (
@@ -26,6 +29,15 @@ function App() {
         </Route>
         <Route path="/designPatterns" exact={true}>
           <DesignPatterns/>
+        </Route>
+        <Route path="/git" exact={true}>
+          <Git/>
+        </Route>
+        <Route path="/regularExpression" exact={true}>
+          <RegularExpression/>
+        </Route>
+        <Route path="/cryptoGraphy">
+          <CryptoGraphy/>
         </Route>
       </Switch>
     </Router>

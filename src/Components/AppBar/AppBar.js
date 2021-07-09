@@ -29,10 +29,10 @@ export default function AppBar() {
                                 <Link to="/dataStructures"><img src={dataStructure} />Data Structures</Link>
                                 <Link to="/designPatterns"><img src={designPatterns} />Design Patterns</Link>
                                 <a href="#"><img src={sql} />SQL</a>
-                                <a href="#"><img src={cryptography} />Cryptography</a>
+                                <Link to="/cryptoGraphy"><img src={cryptography} />Cryptography</Link>
                                 <a href="#"><img src={bitwiseOperations} />Bitwise operations</a>
-                                <a href="#"><img src={regularExpression} />Regular Expressions</a>
-                                <a href="#"><img src={git} />Git</a>
+                                <Link to="/regularExpression"><img src={regularExpression} />Regular Expressions</Link>
+                                <Link to="/git"><img src={git} />Git</Link>
                         </div>
                     </Link>
                     <Link to="/purchase">purchase</Link>
