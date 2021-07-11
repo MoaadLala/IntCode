@@ -68,12 +68,12 @@ export default function AppBar() {
                                 <a href="#">Python</a>
                                 <Link to="/algorithms">Algorithms</Link>
                                 <Link to="/dataStructures">Data Structures</Link>
-                                <a href="#">Design Patterns</a>
+                                <Link to="/designPatterns">Design Patterns</Link>
                                 <a href="#">SQL</a>
-                                <a href="#">Cryptography</a>
+                                <Link to="/cryptoGraphy">Cryptography</Link>
                                 <a href="#">Bitwise operations</a>
-                                <a href="#">Regular Expressions</a>
-                                <a href="#">Git</a>
+                                <Link to="/regularExpression">Regular Expressions</Link>
+                                <Link to="/git">Git</Link>
                             </div>
                         </div></li>
                         <li><Link to="/purchase">purchase</Link></li>
